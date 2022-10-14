@@ -11,7 +11,8 @@ coverage:
         paths: 
           - "!kmaooad-functions/src/test/"
       app:  # declare a new status context "app"
-        paths: "!kmaooad-functions/src/test/"  # remove all files in "tests/"
+        paths:
+          - "!kmaooad-functions/src/test/"  # remove all files in "tests/"
     project:
       default:
         # basic
@@ -23,4 +24,5 @@ coverage:
         paths: 
           - "!kmaooad-functions/src/test/"
       app:  # declare a new status context "app"
-        paths: "!kmaooad-functions/src/test/"  # remove all files in "tests/"
+        paths:
+          - "!kmaooad-functions/src/test/"  # remove all files in "tests/"
