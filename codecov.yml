@@ -5,7 +5,6 @@ coverage:
         # basic
         target: 80%
         threshold: 0%
-        base: auto 
         flags: 
           - unit
         paths: 
@@ -18,7 +17,6 @@ coverage:
         # basic
         target: 80%
         threshold: 0%
-        base: auto 
         flags: 
           - unit
         paths: 
