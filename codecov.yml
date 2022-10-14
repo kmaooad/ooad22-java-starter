@@ -1,0 +1,14 @@
+coverage:
+  status:
+    project:
+      default:
+        # basic
+        target: auto
+        threshold: 0%
+        base: auto 
+        flags: 
+          - unit
+        paths: 
+          - "!kmaooad-functions/src/test/"
+      app:  # declare a new status context "app"
+        paths: "!kmaooad-functions/src/test/"  # remove all files in "tests/"
