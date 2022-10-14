@@ -1,7 +1,4 @@
-# Docs for the Azure Web Apps Deploy action: https://github.com/azure/functions-action
-# More GitHub Actions for Azure: https://github.com/Azure/actions
-
-name: Build and test
+name: CI
 
 on:
   pull_request:
@@ -15,7 +12,7 @@ env:
   JAVA_VERSION: '11' # set this to the java version to use
 
 jobs:
-  build-and-deploy:
+  build-and-test:
     runs-on: windows-latest
     steps:
       - name: 'Checkout GitHub Action'
