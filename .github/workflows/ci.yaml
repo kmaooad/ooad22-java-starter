@@ -30,7 +30,7 @@ jobs:
         shell: pwsh
         run: |
           pushd './${{ env.PACKAGE_DIRECTORY }}'
-          mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+          mvn install -DskipTests=true -B -V
           popd
 
       - name: Run tests and collect coverage
