@@ -1,13 +1,12 @@
 package edu.kmaooad;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-import reactor.core.publisher.Mono;
-
 import java.util.function.Function;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 @Component
-public class TelegramWebhook implements Function<Mono<BotUpdate>, Mono<BotUpdateResult>> {
+public class TelegramWebhook implements Function<BotUpdate, BotUpdateResult> {
 
     private ExampleDependency dep;
 
@@ -15,7 +14,7 @@ public class TelegramWebhook implements Function<Mono<BotUpdate>, Mono<BotUpdate
     public TelegramWebhook(ExampleDependency dep){
         this.dep = dep;
     }
-    public Mono<BotUpdateResult> apply(Mono<BotUpdate> mono) {
-        return mono.map(upd -> BotUpdateResult.Ok(upd.getMessageId(), dep.getSomeNumber()));
+    public BotUpdateResult apply(BotUpdate upd) {
+        return BotUpdateResult.Ok(upd.getMessageId(), dep.getSomeNumber());
     }
 }
